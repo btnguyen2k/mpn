@@ -1,0 +1,20 @@
+name: MyPersonalNotes
+description:
+    en: My Personal Notes
+    vi: My Personal Notes
+languages:
+    default: en
+    en: English
+    vi: Tiếng Việt
+icon: fas fa-blog
+contacts:
+    discord:
+    email: btnguyen2k (at) gmail (dot) com
+    facebook: 
+    github: https://github.com/btnguyen2k/
+    linkedin: https://www.linkedin.com/in/btnguyen2k/
+    slack: 
+    twitter: 
+    website: https://github.com/btnguyen2k/
+tags:
+    build: ${build_datetime}
