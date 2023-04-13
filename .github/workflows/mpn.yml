@@ -51,7 +51,7 @@ jobs:
             az config set extension.use_dynamic_install=yes_without_prompt
             az containerapp update \
               --subscription "${{ secrets.MPN_AZURE_SUBSCRIPTION_ID }}" \
-              --name "npm" \
+              --name "mpn" \
               --resource-group "poc-auseast-rg" \
               --container-name "app" \
               --image "docker.io/btnguyen2k/mpn:${{ github.sha }}"
