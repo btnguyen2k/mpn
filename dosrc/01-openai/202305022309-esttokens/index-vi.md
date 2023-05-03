@@ -5,9 +5,13 @@
 
 Sử dụng các API của OpenAI bạn sẽ nhận ra là nếu bạn cung cấp càng nhiều chỉ dẫn cụ thể và ngữ cảnh liên quan trong prompt thì kết quả càng chất lượng. Tuy nhiên, bạn không thể cung cấp vô hạn chỉ dẫn và ngữ cảnh được (dĩ nhiên rồi!). Các API của OpenAI giới hạn độ dài prompt, và độ dài này có đơn vị tính là _token_.
 
+## Tình huống
+
 Tính số lượng token là nhu cầu cần thiết để tối ưu hoá lượng dữ liệu đưa vào prompt. Nhưng ở đây có một rắc rối tí tẹo là token không tương ứng tuyến tính với số _ký tự_, số _byte_ hay số _từ_ trong dữ liệu đầu vào. Và bạn có thể sẽ rất ngạc nhiên khi phát hiện rằng với cùng 1 chuỗi có độ dài tương đương và ý nghĩa tương đồng thì với mỗi ngôn ngữ tự nhiên (tiếng Anh, tiếng Việt, v.v...) sẽ sinh ra lượng token rất khác xa nhau! Do vậy để tính toán chính xác số lượng token không phải đơn giản cộng, trừ, nhân, chia vài con số là ra kết quả.
 
 OpenAI sử dụng phương pháp _mã hoá cặp đôi_ ([Byte pair encoding](https://en.wikipedia.org/wiki/Byte_pair_encoding), viết tắt BPE) để phân tách token từ chuỗi đầu vào. May mắn là có kha khá [thư viện](https://github.com/topics/bpe) bạn có thể sử dụng để thực hiện tách và đếm số lượng token. Nhưng nếu bạn kém may mắn - không có sẵn thư viện trong ngôn ngữ lập trình của bạn để thực hiện việc này thì bạn vẫn có cách để _ước tính_ số lượng token. Bài viết này sẽ trình bày 1 cách tiếp cận cho công thức ước tính số lượng token từ 1 chuỗi đầu vào.
+
+## Cách tiếp cận
 
 Mặc dù không có sự tương đồng tuyến tính giữa lượng token và số _ký tự_, số _byte_ hay số _từ_ trong chuỗi đầu vào, nhưng theo [thông tin từ OpenAI](https://platform.openai.com/tokenizer) thì với tiếng Anh thông dụng: 1 token tương ứng 4 ký tự, hoặc $\frac 3 4$ từ. Như vậy 4 ký tự đầu vào có thể tương ứng với 1 token và 75 từ tương ứng với 100 token. Ta sẽ sử dụng công thức này để ước tính số lượng token từ chuỗi đầu vào:
 - $s$ là chuỗi đầu vào.
