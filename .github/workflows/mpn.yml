@@ -4,7 +4,7 @@ on:
   # Automatically trigger it when detected changes in repo
   push:
     branches: [ main ]
-    paths: [ 'dosrc/**', '.github/workflows/mpn.yml' ]
+    paths: [ 'dosrc/**', '.github/workflows/mpn.yml', 'Dockerfile' ]
 
   pull_request:
     branches: [ main ]
