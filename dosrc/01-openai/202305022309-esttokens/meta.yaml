@@ -1,0 +1,16 @@
+title:
+    en: How to estimate number of tokens?
+    vi: Làm thế nào ước lượng số token?
+summary:
+    en: This post suggests an approach to estimate number of tokens when you cannot count them.
+    vi: Bài viết này đề xuất một phương pháp ước tính số lượng token khi bạn không thể đếm chúng.
+icon:
+img: '{"s":"entry-img-s.jpg","v":"entry-img-v.jpg","h":"entry-img-h.jpg"}'
+file:
+    en: index-vi.md
+    vi: index-vi.md
+tags:
+    en: [openai, token]
+    vi: [openai, token]
+tc: 1683068969
+tu: 1683068969

@@ -1,20 +1,32 @@
 name: MyPersonalNotes
 description:
-    en: My Personal Notes
-    vi: My Personal Notes
+    en: Capturing my learning adventure as I explore the world of tech and programming.
+    vi: Những dấu chân trên hành trình học tập, khám phá thế giới công nghệ và lập trình.
 languages:
     default: en
     en: English
     vi: Tiếng Việt
 icon: fas fa-blog
 contacts:
-    discord:
     email: btnguyen2k (at) gmail (dot) com
-    facebook: 
     github: https://github.com/btnguyen2k/
     linkedin: https://www.linkedin.com/in/btnguyen2k/
-    slack: 
-    twitter: 
     website: https://github.com/btnguyen2k/
 tags:
     build: ${build_datetime}
+    vi_only: "This post content is available only in Vietnamese language."
+tagalias:
+    en:
+        mytag:
+            - variances1
+            - of2
+            - mytag3
+    vi:
+        mytag:
+            - variances4
+            - of5
+            - mytag6
+mode: blog
+author:
+    name: Thanh Nguyen
+    avatar: //www.gravatar.com/avatar/9d6ee977a36db465f103ea5c0e4b859c
