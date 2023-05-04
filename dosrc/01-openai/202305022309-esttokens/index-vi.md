@@ -1,8 +1,3 @@
-```bs-alert primary flex
-<i class="bi bi-translate me-2" style="font-size: 1.5rem;"></i>
-[[do-tag vi_only]]
-```
-
 Sử dụng các API của OpenAI bạn sẽ nhận ra là nếu bạn cung cấp càng nhiều chỉ dẫn cụ thể và ngữ cảnh liên quan trong prompt thì kết quả càng chất lượng. Tuy nhiên, bạn không thể cung cấp vô hạn chỉ dẫn và ngữ cảnh được (dĩ nhiên rồi!). Các API của OpenAI giới hạn độ dài prompt, và độ dài này có đơn vị tính là _token_.
 
 ## Tình huống
@@ -18,14 +13,14 @@ Mặc dù không có sự tương đồng tuyến tính giữa lượng token v�
 - tính $t1=\frac{b(s)}{4}$, với $b(s)$ là số lượng byte của chuỗi $s$. <br>Với tiếng Anh thông thường 1 ký tự sẽ tương ứng với 1 byte. Nhưng với nhiều ngôn ngữ khác, khi dùng bảng mã Unicode, 1 ký tự có thể được mã hoá bằng nhiều byte. Do vậy ta sử dụng số byte thay vì số ký tự.
 - tính $t2=\frac{4}{3}w(s)+nw(s)$, với:
   - $w(s)$: phân tách $s$ thành các "từ" riêng lẽ. Với mỗi "từ", lấy số byte chia cho 4 và làm tròn lên, cuối cùng cộng dồn kết quả lại với nhau.
-  - $nw(s)$ là tổng số byte của các thành phần phi từ (ví dụ như dấu câu, dâu ngoặc, v.v...) trong chuỗi $s$.
+  - $nw(s)$ là tổng số byte của các thành phần phi từ (ví dụ như dấu câu, dấu ngoặc, v.v...) trong chuỗi $s$.
 - số lượng _token ước tính_ $t=\frac{t1+t2} 2$
 
-A reference implementation in Go can be found [here](https://gist.github.com/btnguyen2k/2cadc210558714d1646f42a07a4bff5f):
+Một [phiên bản tham chiếu]((https://gist.github.com/btnguyen2k/2cadc210558714d1646f42a07a4bff5f)) viết bằng Go:
 ```gh-gist btnguyen2k/2cadc210558714d1646f42a07a4bff5f
 ```
 
-The reference implementation in Go yields the following result:
+Kết quả thử nghiệm:
 |Đầu vào|Token thực tế (*)|Token ước lượng (**)|Sai số|
 |---|:---:|:---:|:---:|
 |Tiếng Trung: `第一个是一，第二个是二，第三个是三。`|33|33|0|
@@ -33,6 +28,7 @@ The reference implementation in Go yields the following result:
 |Tiếng Pháp: `Le numéro 1 est un, le numéro 2 est deux et le numéro 3 est trois.`|26|33|7|
 |Tiếng Đức: `Nummer 1 ist eins, Nummer 2 ist zwei und Nummer 3 ist drei.`|25|24|-1|
 |Tiếng Nhật: `番号1は1で、番号2は2で、番号3は3です。`|28|34|6|
+|Tiếng Hàn: `번호 1은 1이고, 번호 2는 2이고, 번호 3은 3입니다.`|51|41|-10|
 |Tiếng Lào: `ໝາຍເລກ 1 ແມ່ນຫນຶ່ງ, ໝາຍເລກ 2 ແມ່ນສອງ, ແລະ ໝາຍເລກ 3 ແມ່ນສາມ.`|144|92|-52|
 |Tiếng Thái: `หมายเลข 1 คือหนึ่ง หมายเลข 2 คือสอง และหมายเลข 3 คือสาม`|96|89|-7|
 |Tiếng Tây Ban Nha: `El número 1 es uno, el número 2 es dos y el número 3 es tres.`|29|32|3|
@@ -45,7 +41,7 @@ The reference implementation in Go yields the following result:
 (**) Số token ước lượng theo công thức ở trên.
 ```
 
-## Tham khảo
+## Xem thêm
 - Các model của OpenAI và giới hạn token: https://platform.openai.com/docs/models
 - Giới hạn token của các model embedding: https://platform.openai.com/docs/guides/embeddings/embedding-models
 - Một số thư viện về BPE trên GitHub: https://github.com/topics/bpe

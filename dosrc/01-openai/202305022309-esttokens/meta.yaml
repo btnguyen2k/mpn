@@ -7,7 +7,7 @@ summary:
 icon:
 img: '{"s":"entry-img-s.jpg","v":"entry-img-v.jpg","h":"entry-img-h.jpg"}'
 file:
-    en: index-vi.md
+    en: index-en.md
     vi: index-vi.md
 tags:
     en: [openai, token]

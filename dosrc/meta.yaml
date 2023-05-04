@@ -17,15 +17,10 @@ tags:
     vi_only: "This post content is available only in Vietnamese language."
 tagalias:
     en:
-        mytag:
-            - variances1
-            - of2
-            - mytag3
+        token: [tokens]
+        vuejs: [vue, vue3]
     vi:
-        mytag:
-            - variances4
-            - of5
-            - mytag6
+        vuejs: [vue, vue3]
 mode: blog
 author:
     name: Thanh Nguyen
