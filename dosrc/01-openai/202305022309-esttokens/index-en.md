@@ -21,7 +21,7 @@ A reference implementation in Go is available [here](https://gist.github.com/btn
 ```
 
 The output of this implementation is as follows:
-|Input|Token count (*)|Estimated token count (**)|Difference|
+|Input | Token count (*) | Estimated token count (**) | Difference |
 |---|:---:|:---:|:---:|
 |Chinese: `第一个是一，第二个是二，第三个是三。`|33|33|0|
 |English: `Number 1 is one, number 2 is two and number 3 is three.`|15|24|9|
@@ -41,7 +41,7 @@ The output of this implementation is as follows:
 (**) Estimated token count is computed using the formula presented earlier.
 ```
 
-## Tham khảo
+## See also
 - OpenAI's models and their token limits: https://platform.openai.com/docs/models
 - Token limits of OpenAI's embedding models: https://platform.openai.com/docs/guides/embeddings/embedding-models
 - BPE libraries on GitHub: https://github.com/topics/bpe

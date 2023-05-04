@@ -21,7 +21,7 @@ Một [phiên bản tham chiếu]((https://gist.github.com/btnguyen2k/2cadc21055
 ```
 
 Kết quả thử nghiệm:
-|Đầu vào|Token thực tế (*)|Token ước lượng (**)|Sai số|
+|Đầu vào | Token thực tế (*) | Token ước lượng (**) | Sai số |
 |---|:---:|:---:|:---:|
 |Tiếng Trung: `第一个是一，第二个是二，第三个是三。`|33|33|0|
 |Tiếng Anh: `Number 1 is one, number 2 is two and number 3 is three.`|15|24|9|
