@@ -45,3 +45,7 @@ Kết quả thử nghiệm:
 - Các model của OpenAI và giới hạn token: https://platform.openai.com/docs/models
 - Giới hạn token của các model embedding: https://platform.openai.com/docs/guides/embeddings/embedding-models
 - Một số thư viện về BPE trên GitHub: https://github.com/topics/bpe
+
+<hr>
+
+_[[do-tag ghissue_comment.vi]]_

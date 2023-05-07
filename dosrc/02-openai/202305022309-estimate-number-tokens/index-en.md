@@ -45,3 +45,12 @@ The output of this implementation is as follows:
 - OpenAI's models and their token limits: https://platform.openai.com/docs/models
 - Token limits of OpenAI's embedding models: https://platform.openai.com/docs/guides/embeddings/embedding-models
 - BPE libraries on GitHub: https://github.com/topics/bpe
+
+<hr/>
+
+```bs-alert warning
+
+Disclaimer: I utilized Grammarly and ChatGPT to proofread and rephrase certain sections of this post.
+```
+
+_[[do-tag ghissue_comment.en]]_

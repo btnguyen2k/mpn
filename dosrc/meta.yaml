@@ -15,6 +15,9 @@ contacts:
 tags:
     build: ${build_datetime}
     vi_only: "This post content is available only in Vietnamese language."
+    ghissue_comment:
+        vi: "Vui lòng tạo [GitHub issue](https://github.com/btnguyen2k/mpn/issues) để góp ý cho nội dung bài viết."
+        en: "Have any comment or suggestion, please use [GitHub issues](https://github.com/btnguyen2k/mpn/issues)."
 tagalias:
     en:
         token: [tokens]

@@ -1,25 +1,16 @@
 title:
-    en: The document title (in en)
-    vi: The document title (in vi)
+    en: Convert an HTML template to Vue components
+    vi: Chuyển đổi một template HTML sang Vue component
 summary:
-    en: Summary about document content (in en)
-    vi: Summary about document content (in vi)
-icon: fas fa-file
+    en: Step-by-step process of transforming an HTML template to Vue components.
+    vi: Hướng dẫn từng bước chuyển đổi một template HTML thành Vue component.
+icon:
+img: '{"s":"entry-img-s.jpg","v":"entry-img-v.jpg","h":"entry-img-h.jpg"}'
 file:
-    en: index-en.md
+    en: index-vi.md
     vi: index-vi.md
 tags:
-    en:
-        - the
-        - document
-        - title
-        - in
-        - en
-    vi:
-        - the
-        - document
-        - title
-        - in
-        - vi
+    en: [vue, html, template]
+    vi: [vue, html, template]
 tc: 1683215751
 tu: 1683215751
