@@ -374,7 +374,7 @@ In this post, we have gone through the detailed steps to convert an HTML templat
 
 ```bs-alert warning
 
-Disclaimer: I utilized Grammarly and ChatGPT to proofread and rephrase certain sections of this post.
+Disclaimer: I utilized ChatGPT to proofread and rephrase certain sections of this post.
 ```
 
 _[[do-tag ghissue_comment.en]]_
