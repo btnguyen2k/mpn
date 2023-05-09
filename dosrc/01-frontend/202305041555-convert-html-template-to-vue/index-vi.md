@@ -1,8 +1,3 @@
-```bs-alert warning flex
-<i class="bi bi-translate me-3"></i>
-[[do-tag vi_only]]
-```
-
 Bạn bắt đầu một dự án Vue mới và tìm thấy một chiếc template rất thích hợp cho dự án của mình. Nhưng cái template này ở dạng HTML, không đem về "cắm thẳng" vào dự án Vue của bạn là chạy được, mà bạn cần phải chuyển đổi nó sang Vue component mới có thể sử dụng. Bài viết này hướng dẫn từng bước chuyển đổi một template HTML thành Vue component để sử dụng.
 
 Giả thuyết rằng bạn đã quen thuộc với Vue và thoải mái làm việc với HTML/CSS/Javascript cũng như các công cụ liên quan như `npm`. Chúng ta sẽ chuyển 1 [trang đăng nhập được thiết kế bằng Bootstrap](https://getbootstrap.com/docs/5.3/examples/sign-in/) sang Vue component. Trang đăng nhập này thiết kế giao diện sử dụng _Bootstrap 5_, bao gồm _1 trang HTML_, _1 tập tin CSS_ và _1 tập tin javascript_. Khi bạn đã nắm được công thức chuyển đổi từ 1 trang HTML sang 1 Vue component thì việc chuyển đổi 1 template HTML có nhiều trang sang Vue component cũng sẽ không làm khó bạn.
@@ -146,11 +141,11 @@ $ npm install bootstrap@5.3.0-alpha3 -S
 ```
 
 và
-```s
+```sh
 $ npm i bootstrap-icons -S
 ```
 
-Kế tiếp, import Bootstrap trong phần `<style>` của tập tin `src/App.vue`:
+Kế tiếp, import Bootstrap và Bootstrap icons trong phần `<style>` của tập tin `src/App.vue`:
 ```html
 <style lang="css">
 /* Bootstrap 5.x */
@@ -201,25 +196,35 @@ Quá trình chuyển đổi mã HTML sang Vue component khá là trực tiếp: 
 
 **Copy phần HTML nằm giữa `<body>` và `</body>`.** Không copy các phần HTML nằm ngoài, ví dụ như phần trong `<head>`.
 
-**Chỉ có duy nhất 1 thẻ nằm ở cấp độ cao nhất trong template.** Nếu có hơn 2 thẻ, dạng như
+Bạn có thể gặp thông báo lỗi hoặc cảnh báo `The template root requires exactly one element.`. Các phiên bản Vue cũ chỉ chấp nhận 1 thẻ nằm ở cấp độ cao nhất trong template. Tức là, nếu có hơn 2 thẻ, dạng như:
 ```html
 <template>
-    <h1>Đây là tiêu đề</h1>
-    <p>Đây là nội dung</p>
+    <header>
+        <h1>Chào mừng</h1>
+    </header>
+    <section>
+        <p>Nội dung ở đây.</p>
+    </section>
 </template>
 ```
 
-thì Vue sẽ báo lỗi `The template root requires exactly one element.` Do vậy, bạn hãy bao 1 thẻ `div` ở bên ngoài để cấp độ cao nhất chỉ còn lại 1 thẻ:
+thì có thể bạn sẽ nhận thông báo lỗi hoặc cảnh báo. Để xử lý, bạn có thể nâng cấp phiên bản Vue, IDE cùng với các plug-in và thư viện tương ứng, hoặc đơn giản là bao 1 thẻ `div` ở bên ngoài để cấp độ cao nhất chỉ còn lại 1 thẻ:
 ```html
 <template>
     <div>
-        <h1>Đây là tiêu đề</h1>
-        <p>Đây là nội dung</p>
+        <header>
+            <h1>Chào mừng</h1>
+        </header>
+        <section>
+            <p>Nội dung ở đây.</p>
+        </section>
     </div>
 </template>
 ```
 
-**Chuyển các CSS nhúng** đặt riêng vào phần `<style scoped>...</style>` trong Vue component. Các CSS nhưng là các phần CSS nằm giữa thẻ `<style>` và `</style>` trong trang HTML gốc. Lưu ý: các CSS nhúng này thường được khai báo trong phần `<head>` nhưng thỉnh thoảng cũng có thể được khai báo trong `<body>`. Nhớ đừng bỏ sót đoạn nào. Lúc này tập tin `LogIn.vue` của chúng ta sẽ có nội dung tương tự như sau:
+_Bài viết này chọn cách tiếp cận thứ 2: bao 1 thẻ `<div>` bên ngoài._
+
+**Chuyển các CSS nhúng** đặt riêng vào phần `<style scoped>...</style>` trong Vue component. Các CSS nhúng là các phần CSS nằm giữa thẻ `<style>` và `</style>` trong trang HTML gốc. Lưu ý: các CSS nhúng này thường được khai báo trong phần `<head>` nhưng thỉnh thoảng cũng có thể được khai báo trong `<body>`. Nhớ đừng bỏ sót đoạn nào. Lúc này tập tin `LogIn.vue` của chúng ta sẽ có nội dung tương tự như sau:
 ```html
 <template>
     <div>
@@ -277,7 +282,7 @@ Lưu ý là tâp tin `color-modes.js` chúng ta không đưa vào thư mục `sr
 - Bạn cũng có thể tách phần CSS nhúng trong thẻ `<style>` ra các tập tin riêng thay vì để trong tập tin `.vue` nếu muốn.
 ```
 
-Trước khi kết thúc qui hoạch, bạn hãy kiểm tra các tập tin trong thư mục `src/assets` để đảm bảo rằng tham chiếu đến các tập tin là đúng. Chẳng hạn như trong tập tin CSS có tham chiếu `background-image: url('background.jpg')`, hãy đảm bảo rằng đường dẫn tới tập tin `background.jpg` là đúng.
+Trước khi kết thúc qui hoạch và chuyển sang phẩn kế tiếp, bạn hãy kiểm tra các tập tin trong thư mục `src/assets` để đảm bảo rằng tham chiếu đến các tập tin là đúng. Chẳng hạn như trong tập tin CSS có tham chiếu `background-image: url('background.jpg')`, hãy đảm bảo rằng đường dẫn tới tập tin `background.jpg` là chính xác.
 
 ## 5. Cập nhật HTML lần cuối
 

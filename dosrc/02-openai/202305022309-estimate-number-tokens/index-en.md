@@ -4,7 +4,7 @@ As a developer using OpenAI's API, you'll quickly learn that providing detailed 
 
 It's important to count the number of tokens in your prompt to optimize its performance. However, there's a caveat: token count isn't directly correlated to the number of _characters_, _bytes_, or _words_ in the prompt. This means that similar strings can result in different token counts in different natural languages (such as English and Vietnamese). As a result, accurately counting tokens is not a trivial task.
 
-OpenAI uses [Byte Pair Encoding](https://en.wikipedia.org/wiki/Byte_pair_encoding) (BPE) for prompt input tokenization. Luckily, several programming language [libraries](https://github.com/topics/bpe) can tokenize and count the number of tokens from a string. However, if a suitable library is unavailable in your preferred programming language, you can still _estimate_ the number of tokens. This article proposes an approach to approximating the token count from an input string.
+OpenAI uses [Byte Pair Encoding](https://en.wikipedia.org/wiki/Byte_pair_encoding) (BPE) for prompt input tokenization. Luckily, several programming language [libraries](https://github.com/topics/bpe) can tokenize and count the number of tokens from a string. However, if a suitable library is unavailable in your preferred programming language, you can still _estimate_ the number of tokens. This post proposes an approach to approximating the token count from an input string.
 
 ## The approach
 
