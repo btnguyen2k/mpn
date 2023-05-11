@@ -21,6 +21,7 @@ tags:
 tagalias:
     en:
         token: [tokens]
+        model: [models]
         vuejs: [vue, vue3]
     vi:
         vuejs: [vue, vue3]

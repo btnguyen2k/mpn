@@ -1,6 +1,6 @@
 title:
-    en: Convert an HTML template to Vue components
-    vi: Chuyển đổi một template HTML sang Vue component
+    en: Convert an HTML template to Vue
+    vi: Chuyển đổi một template HTML sang Vue
 summary:
     en: Step-by-step process of transforming an HTML template to Vue components.
     vi: Hướng dẫn từng bước chuyển đổi một template HTML thành Vue component.

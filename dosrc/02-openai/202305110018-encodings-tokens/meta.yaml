@@ -1,0 +1,16 @@
+title:
+    en: "OpenAI models and token counting"
+    vi: "Mô hình OpenAI và đếm số token"
+summary:
+    en: Do OpenAI models have variations in their token counting algorithms? Let's find out!
+    vi: Các mô hình OpenAI có sự khác biệt về thuật toán đếm token không? Hãy thử tìm hiểu!
+icon:
+img: '{"s":"entry-img-s.jpg","v":"entry-img-v.jpg","h":"entry-img-h.jpg"}'
+file:
+    en: index-en.md
+    vi: index-vi.md
+tags:
+    en: [openai, tokens, encoding, models]
+    vi: [openai, token, encoding, mô hình]
+tc: 1683764292
+tu: 1683764292
