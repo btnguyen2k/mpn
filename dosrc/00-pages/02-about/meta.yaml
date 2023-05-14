@@ -1,0 +1,14 @@
+title:
+    en: About me
+    vi: Thông tin
+summary:
+    en: About me
+    vi: Thông tin về tôi
+icon: fas fa-info
+page: about
+style: about
+file:
+    en: index-en.md
+    vi: index-vi.md
+tc: 1683787927
+tu: 1683787927
