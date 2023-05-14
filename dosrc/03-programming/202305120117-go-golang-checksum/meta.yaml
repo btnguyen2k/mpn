@@ -1,0 +1,16 @@
+title:
+    en: "Calculating checksums in Go"
+    vi: "Tính checksum trong Go"
+summary:
+    en: This blog post introduces a method for calculating checksums of various data types in Go, including complex ones such as nested data types.
+    vi: Bài viết này giới thiệu một phương pháp tính checksum của các loại dữ liệu khác nhau trong Go, bao gồm loại dữ liệu phức tạp như dữ liệu lồng nhau.
+icon:
+img: '{"s":"entry-img-s.jpg","v":"entry-img-v.jpg","h":"entry-img-h.jpg"}'
+file:
+    en: index-en.md
+    vi: index-vi.md
+tags:
+    en: [go, golang, checksum]
+    vi: [go, golang, checksum]
+tc: 1683854263
+tu: 1683854263

@@ -23,8 +23,10 @@ tagalias:
         token: [tokens]
         model: [models]
         vuejs: [vue, vue3]
+        golang: [go]
     vi:
         vuejs: [vue, vue3]
+        golang: [go]
 mode: blog
 author:
     name: Thanh Nguyen
