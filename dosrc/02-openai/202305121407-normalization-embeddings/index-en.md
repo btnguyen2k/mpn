@@ -67,7 +67,7 @@ The following OpenAI models were used in the experiment:
 A higher `cosine similarity` value indicates a greater similarity between the text string and the question.
 ```
 
-The experiment results are insufficient to draw a definitive conclusion due to the limited number of test cases, but it provides an initial idea. For those interested, the full source code used in the experiment can be found [here](https://gist.github.com/btnguyen2k/2d418b899a3673cd7b10c68ab39075db), enabling one to conduct the experiment on your own data.
+The experiment results are insufficient to draw a definitive conclusion due to the limited number of test cases, but it provides an initial idea. For those interested, the full source code used in the experiment can be found [here](https://gist.github.com/btnguyen2k/2d418b899a3673cd7b10c68ab39075db), enabling one to conduct the experiment on their own data.
 
 <hr/>
 
