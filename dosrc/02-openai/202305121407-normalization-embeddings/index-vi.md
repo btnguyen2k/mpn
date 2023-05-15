@@ -69,6 +69,40 @@ Giá trị `cosine similarity` càng lớn thể hiện độ tương đồng gi
 
 Vì số lượng mẫu thử không đủ nhiều để chúng ta có thể rút ra một kết luận chính xác từ kết quả thực nghiệm, tuy nhiên nó cung cấp một số ý tưởng ban đầu để triển khai thêm. Nếu bạn quan tâm, có thể tham khảo mã nguồn được sử dụng trong thực nghiệm [ở đây](https://gist.github.com/btnguyen2k/2d418b899a3673cd7b10c68ab39075db) và tiến hành thực nghiệm trên tập dữ liệu của riêng bạn.
 
+**Thực nghiệm với tiếng Việt**
+
+Bên dưới là kết quả thực nghiệm với đoạn văn bản tiếng Việt:
+```markdown
+# Tập tin metadata
+
+Mỗi một thư mục bài viết có một _tập tin metadata_ riêng. Tập tin này chứa các _trường thông tin_ sau:
+
+- **icon**: (string) icon của bài viết, hỗ trợ icon FontAwesome, ví dụ: <code>icon: fas fa-file</code>.
+- **title**: (string) tiêu đề của bài viết, ví dụ: <code>title: "DO CMS là gì"</code>.
+- **summary**: (string) tóm tắt ngắn gọn nội dung bài viết, ví dụ: <code>summary: "DO CMS là Hệ thống quản lý nội dung..."</code>.
+- **tc**: (int) thời gian bài viết được tạo, ở định sạng UNIX timestamp, ví dụ <code>tc: 1684128579</code>.
+```
+
+Câu hỏi: `tập tin metadata có bao nhiêu trường thông tin?`
+
+Kết quả:
+
+|Model|Dimensions|Origin|Lower|NoNL|NoNLNW|NormFull|
+|-----|---------:|-----:|----:|---:|-----:|-------:|
+|<span class="text-nowrap text-info">        text-embedding-ada-002</span>|<span class="text-info"> 1536</span>|<span class="text-info">0.868167</span>|<span class="text-info">0.866878</span>|<span class="text-info">0.867377</span>|<span class="text-info">**0.887203**</span>|<span class="text-info"><u>0.885630</u></span>|
+|<span class="text-nowrap">       text-similarity-ada-001</span>| 1024|0.828773|0.832341|0.833609|<u>0.848432</u>|**0.853005**|
+|<span class="text-nowrap">   text-similarity-babbage-001</span>| 2048|0.782900|<u>0.789732</u>|0.779908|0.787809|**0.795255**|
+|<span class="text-nowrap">     text-similarity-curie-001</span>| 4096|0.753109|0.756025|0.762263|<u>0.778867</u>|**0.779026**|
+|<span class="text-nowrap">   text-similarity-davinci-001</span>|12288|0.647523|<u>0.660092</u>|0.639507|0.645955|**0.661849**|
+|<span class="text-nowrap">       text-search-ada-doc-001</span>| 1024|0.773727|0.776633|0.766685|<u>0.790963</u>|**0.793348**|
+|<span class="text-nowrap">     text-search-ada-query-001</span>| 1024|0.761278|0.769295|0.767522|<u>0.786152</u>|**0.791242**|
+|<span class="text-nowrap">   text-search-babbage-doc-001</span>| 2048|0.734902|<u>0.747060</u>|0.729072|0.737354|**0.750097**|
+|<span class="text-nowrap"> text-search-babbage-query-001</span>| 2048|0.749683|<u>0.765511</u>|0.756029|0.758389|**0.770678**|
+|<span class="text-nowrap">     text-search-curie-doc-001</span>| 4096|0.725577|**0.729580**|0.721478|0.727762|<u>0.728584</u>|
+|<span class="text-nowrap">   text-search-curie-query-001</span>| 4096|<u>0.751477</u>|**0.756445**|<u>0.751380</u>|0.729285|0.736985|
+|<span class="text-nowrap">   text-search-davinci-doc-001</span>|12288|0.628781|**0.640672**|0.620964|0.623006|<u>0.635047</u>|
+|<span class="text-nowrap"> text-search-davinci-query-001</span>|12288|0.677347|0.673591|0.668126|<u>0.680186</u>|**0.692823**|
+
 <hr/>
 
 _[[do-tag ghissue_comment.vi]]_
