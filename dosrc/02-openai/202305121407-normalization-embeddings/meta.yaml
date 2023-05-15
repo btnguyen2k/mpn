@@ -1,0 +1,16 @@
+title:
+    en: Normalize input text for embeddings or not?
+    vi: Có nên chuẩn hóa dữ liệu trước khi trích xuất embeddings?
+summary:
+    en: Prior to obtaining embeddings, is it necessary to normalize input text? Let's conduct some experiments.
+    vi: Trước khi trích xuất embeddings, có cần thiết phải chuẩn hoá văn bản đầu vào không? Hãy cùng thử nghiệm.
+icon:
+img: '{"s":"entry-img-s.jpg","v":"entry-img-v.jpg","h":"entry-img-h.jpg"}'
+file:
+    en: index-en.md
+    vi: index-vi.md
+tags:
+    en: [openai, embeddings]
+    vi: [openai, embeddings]
+tc: 1683900423
+tu: 1683900423

@@ -24,9 +24,11 @@ tagalias:
         model: [models]
         vuejs: [vue, vue3]
         golang: [go]
+        embeddings: [embedding]
     vi:
         vuejs: [vue, vue3]
         golang: [go]
+        embeddings: [embedding]
 mode: blog
 author:
     name: Thanh Nguyen
