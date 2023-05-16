@@ -9,7 +9,7 @@ OpenAI cung cấp [API](https://platform.openai.com/docs/api-reference/embedding
 [1] Tham khảo https://platform.openai.com/docs/guides/embeddings/what-are-embeddings
 ```
 
-## Dữ liệu text
+## Dữ liệu test
 
 Tôi chuẩn bị _1 đoạn căn bản_ và _1 câu hỏi_, sử dụng 1 model OpenAI để trích xuất véc tơ nhúng từ cả 2. Sau đó giá trị `cosine similarity` được tính từ 2 véc tơ để xác định độ tương đồng giữa chúng. Thực nghiệm được tiến hành trên nhiều phiên bản chuẩn hoá khác nhau của đoạn văn bản đầu vào.
 
