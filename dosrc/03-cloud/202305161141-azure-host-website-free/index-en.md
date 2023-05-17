@@ -32,6 +32,15 @@ Azure offers quite a few free services<sup>[*]</sup> that can be used to host yo
 - [**Azure Container Apps**](https://azure.microsoft.com/pricing/details/container-apps/): monthly free of _180,000 vCPU-seconds, 360,000 GiB Memory-seconds and 2 million requests_ with **Consumption** plan. The website can be deployed as a container.
 - [**Azure Functions**](https://azure.microsoft.com/pricing/details/functions/): monthly free of 1 million requests and 400,000 GB resource-seconds with **Consumption** plan. The website can be deployed as a binary packages or container.
 
+```bs-alert primary
+
+➡️ While Azure Functions may not be the optimal choice for hosting a website, it remains well-suited for _web API applications_.
+
+⚠️ The _Consumption_ plan does not support the deployment of applications as _containers_.
+
+⚠️ A storage account is created by default with each Functions app. The storage account is _not included_ in the free grant. However, the associated cost is relatively small.
+```
+
 ## Database
 
 In scenarios where your website requires database storage, Azure allows _one free Cosmos DB account per subsciprtion_, which includes 1000 RU/s and 25Gb storage capacity at no cost.

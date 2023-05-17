@@ -32,6 +32,15 @@ Bạn có thể lưu trữ trang web của bạn trên Azure với các dịch v
 - [**Azure Container Apps**](https://azure.microsoft.com/pricing/details/container-apps/): miễn phí _mỗi tháng 180000 vCPU-second, 360000 GiB Memory-second và 2 triệu request_ với plan **Consumption**. Triển khai trang web/app dạng container.
 - [**Azure Functions**](https://azure.microsoft.com/pricing/details/functions/): miễn phí mỗi tháng 1 triệu request và 400000 GB-s resource với plan **Consumption**. Triển khai trang web/app dạng binary package hoặc container.
 
+```bs-alert primary
+
+➡️ Azure Functions không phải là dịch vụ lý tưởng để lưu trữ 1 website, nhưng vẫn thích hợp để triển khai 1 _ứng dụng web dạng API_.
+
+⚠️ Plan _Consumption_ của Azure Functions hiện không hỗ trợ triển khai ứng dụng dạng _container_.
+
+⚠️ _Azure Functions cần đi kèm với dịch vụ Storage_. Do vậy sẽ phát sinh chi phí cho dịch Storage này. Tuy nhiên phần chi phí này khá nhỏ, gần như không đáng kể.
+```
+
 ## Database
 
 Nếu trang web của bạn cần lưu dữ liệu trong 1 database, Azure cho phép bạn tạo _1 instance Cosmos DB miễn phí trên mỗi subscription_, bao gồm _1000 RU/s và 25 Gb storage_<sup>[**]</sup>.
