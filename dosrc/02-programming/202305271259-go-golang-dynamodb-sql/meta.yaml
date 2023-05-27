@@ -1,0 +1,16 @@
+title:
+    en: Go database/sql driver for AWS DynamoDB
+    vi: Go database/sql driver cho AWS DynamoDB
+summary:
+    en: Access AWS DynamoDB in Go applications via standard database/sql package.
+    vi: Truy cập AWS DynamoDB trong Go thông qua package chuẩn database/sql.
+icon:
+img: '{"s":"entry-img-s.jpg","v":"entry-img-v.jpg","h":"entry-img-h.jpg"}'
+file:
+    en: index-en.md
+    vi: index-vi.md
+tags:
+    en: [go, golang, dynamodb, sql]
+    vi: [go, golang, dynamodb, sql]
+tc: 1685192382
+tu: 1685192382
