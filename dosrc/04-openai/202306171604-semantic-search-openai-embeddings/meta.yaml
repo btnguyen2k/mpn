@@ -1,0 +1,16 @@
+title:
+    en: Semantic Search with OpenAI Embeddings
+    vi: Tìm kiếm ngữ nghĩa với OpenAI Embeddings
+summary:
+    en: This post demonstrates a practical guide on employing OpenAI embeddings for effective implementation of semantic search in applications.
+    vi: Bài viết này trình bày một hướng dẫn thực tế về cách sử dụng OpenAI embeddings để xây dựng tính năng tìm kiếm ngữ nghĩa trong các ứng dụng.
+icon:
+img: '{"s":"entry-img-s.jpg","v":"entry-img-v.jpg","h":"entry-img-h.jpg"}'
+file:
+    en: index-en.md
+    vi: index-vi.md
+tags:
+    en: [embeddings, search, openai]
+    vi: [embedding, tìm kiếm, openai]
+tc: 1687017899
+tu: 1687017899
