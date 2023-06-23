@@ -1,4 +1,4 @@
-Nếu bạn có kế hoạch thiết kế 1 hệ thống tìm [kiếm ngữ nghĩa sử dụng embedding vec-tơ](../../openai/semantic-search-openai-embeddings/), trích xuất embedding vec-tơ từ đầu vào sẽ là 1 bước quan trọng không thể thiếu để xây dựng lên thống. OpenAI cung cấp một [API xuất sắc](https://platform.openai.com/docs/api-reference/embeddings) để thực hiện tác vụ đó. Tuy nhiên, trong một số trường hợp, bạn có thể phát sinh nhu cầu triển khai 1 API tương tự bên trong môi trường riêng của bạn:
+Nếu bạn có kế hoạch thiết kế 1 hệ thống [tìm kiếm ngữ nghĩa sử dụng embedding vec-tơ](../../openai/semantic-search-openai-embeddings/), trích xuất embedding vec-tơ từ đầu vào sẽ là 1 bước quan trọng không thể thiếu để xây dựng lên thống. OpenAI cung cấp một [API xuất sắc](https://platform.openai.com/docs/api-reference/embeddings) để thực hiện tác vụ đó. Tuy nhiên, trong một số trường hợp, bạn có thể phát sinh nhu cầu triển khai 1 API tương tự bên trong môi trường riêng của bạn:
 - Qui định của doanh nghiệp không cho phép bạn gởi dữ liệu ra hệ thống bên ngoài.
 - Bạn cần 1 model embedding tuỳ chỉnh riêng, thích hợp hơn cho dữ liệu của riêng bạn.
 - Bạn muốn tối ưu chi phí<sup>[1]</sup>.
