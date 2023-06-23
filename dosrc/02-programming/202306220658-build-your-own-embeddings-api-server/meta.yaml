@@ -1,0 +1,16 @@
+title:
+    en: Build your own embeddings API server
+    vi: Xây dựng embedding API của riêng bạn
+summary:
+    en: Planning to build a semantic search system based on embeddings vector? Implement your own embeddings API server with this step-by-step guide.
+    vi: Bạn có kế hoạch thiết kế 1 hệ thống tìm kiếm ngữ nghĩa sử dụng embedding vec-tơ? Xây dựng embedding API cho riêng bạn theo hướng dẫn chi tiết trong bài viết này.
+icon:
+img: '{"s":"entry-img-s.jpg","v":"entry-img-v.jpg","h":"entry-img-h.jpg"}'
+file:
+    en: index-en.md
+    vi: index-vi.md
+tags:
+    en: [embeddings, api, server]
+    vi: [embedding, api, server]
+tc: 1687417110
+tu: 1687417110
