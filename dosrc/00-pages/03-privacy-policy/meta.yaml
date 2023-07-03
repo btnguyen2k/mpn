@@ -6,7 +6,7 @@ summary:
     vi: "Tuyên bố Quyền riêng tư (Cập nhật lần cuối: 2023-07-03)"
 icon: fas fa-key
 page: privacy-policy
-style:
+style: 'special'
 file:
     en: index-en.md
     vi: index-vi.md
