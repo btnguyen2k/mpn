@@ -1,0 +1,16 @@
+title:
+    en: Split long text to fit LLM constraints using LangChain.
+    vi: Sử dụng LangChain để chia nhỏ văn bản cho vừa với LLM.
+summary:
+    en: "This blog post explores the technique of leveraging LangChain to effectively split lengthy texts to fit within the constraints of LLM."
+    vi: "Bài viết này giới thiệu kỹ thuật sử dụng LangChain để chia nhỏ các văn bản dài một cách hiệu quả để phù hợp với giới hạn độ dài của LLM."
+icon:
+img: '{"s":"entry-img-s.jpg","v":"entry-img-v.jpg","h":"entry-img-h.jpg"}'
+file:
+    en: index-en.md
+    vi: index-vi.md
+tags:
+    en: [llm, langchain]
+    vi: [llm, langchain]
+tc: 1688372779
+tu: 1688372779
