@@ -1,0 +1,16 @@
+title:
+    en: Keep dependencies up-to-date with Dependabot
+    vi: Tự động cập nhật các thư viện với Dependabot
+summary:
+    en: "Allow Dependabot to open pull requests automatically to keep your dependencies up-to-date when new versions are available."
+    vi: "Cho phép Dependabot tự động mở pull requests để giữ các thư viện bạn đang dùng luôn được cập nhật khi có phiên bản mới."
+icon:
+img: '{"s":"entry-img-s.jpg","v":"entry-img-v.jpg","h":"entry-img-h.jpg"}'
+file:
+    en: index-en.md
+    vi: index-vi.md
+tags:
+    en: [github, dependabot, devops, devsecops]
+    vi: [github, dependabot, devops, devsecops]
+tc: 1689742823
+tu: 1689742823
