@@ -2,6 +2,11 @@ During the development lifecycle of a software product, it is crucial to regular
 
 Thankfully, GitHub's Dependabot offers automated tracking and updating of new versions for third-party libraries across a wide range of popular programming languages and frameworks. This blog post introduces a step-by-step guide to configuring Dependabot for automatic updates of the latest versions of third-party libraries in your project.
 
+```bs-alert info
+
+Dependabot version updates are free to use for all repositories on GitHub.com.
+```
+
 ## Setup Dependabot
 
 To begin, your project's source code must be hosted on [GitHub](https://github.com). To enable tracking and updating of new versions for third-party libraries, you'll need to create a `dependabot.yaml` (or .yml) file and place it in the `.github` directory of your project's repository. The content of the `dependabot.yaml` file has the following structure:
@@ -98,9 +103,7 @@ Once setup correctly, GitHub will automatically trigger Dependabot based on the 
 
 Once you receive the pull requests, you have the option to review the changes and merge them into the project's default branch.
 
-## Before we wrap up
-
-We have learned how to set up Dependabot for automated updates of new versions of third-party libraries used in the project. For detailed information, you can consult the official Dependabot documentation at https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/about-dependabot-version-updates.about-dependabot-version-updates.
+## Automate merging pull requests created by Dependabot
 
 While Dependabot can handle automatic updates of third-party library versions, it requires your manual review and merging of the pull requests it creates. To take it a step further, you have the option to setup a GitHub action that automates the merging process for these pull requests.
 
@@ -172,6 +175,25 @@ jobs:
 ```
 
 Commit and push the file to the `main` branch. Going forward, whenever Dependabot creates a new pull request to update a third-party library's version, the GitHub action will automatically merge the pull request into the `main` branch of the project.
+
+## Before we wrap up
+
+We have learned how to set up Dependabot for automated updates of new versions of third-party libraries used in the project. For detailed information, you can consult the official Dependabot documentation at https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/about-dependabot-version-updates.about-dependabot-version-updates.
+
+Dependabot is a free yet powerful tool to manage dependencies for software projects. However, Nonetheless, it is imperative to note that Dependabot does not natively support repositories outside the GitHub ecosystem. In such scenarios, you can leverage alternative Dependabot-derived tools, such as
+
+- [dependabot-gitlab](https://gitlab.com/dependabot-gitlab/dependabot): an application powered by [dependabot-core](https://github.com/dependabot/dependabot-core) that provides automated dependency update management for GitLab platform.
+- [dependabot-azure-devops](https://github.com/tinglesoftware/dependabot-azure-devops): tools for updating dependencies in Azure DevOps repositories using Dependabot.
+
+Or third-party solutions:
+
+- [Renovate](https://github.com/renovatebot/renovate): open-sourced, support multi-languages and multi-platforms (GitHub, GitLab, Bitbucket, Azure DevOps, AWS CodeCommit, ...).
+- [FOSSA](https://fossa.com/): a SaaS solution. [Free tier](https://fossa.com/pricing) supports 5 projects <sup>[*]</sup>.
+
+```bs-alert warning
+
+[*] Please note that the information is accurate as of the time this blog post is published. Be aware that service providers retain the right to modify their offerings and policies without prior notice.
+```
 
 <hr/>
 

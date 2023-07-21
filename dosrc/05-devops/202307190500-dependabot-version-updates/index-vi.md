@@ -2,6 +2,11 @@ Trong suốt vòng đời phát triển của sản phẩm phần mềm, cập n
 
 Rất may mắn, Dependabot của GitHub có thể giúp chúng ta theo dõi và cập nhật phiên bản mới cho các thư viện của bên thứ 3 một cách tự động cho hầu hết các ngôn ngữ lập trình và framework phổ biến hiện nay. Bài viết này giới thiệu cách cài đặt Dependabot để tự động cập nhập các phiên bản mới nhất của các thư viện bên thứ 3 trong dự án của bạn.
 
+```bs-alert info
+
+Dependabot version updates miễn phí khi sử dụng với các dự án host trên GitHub.com.
+```
+
 ## Cài đặt Dependabot
 
 Đầu tiên, mã nguồn dự án của bạn cần phải host trên [GitHub](https://github.com). Bạn cài đặt tính năng theo dõi và cập nhật phiên bản mới cho thư viện bên thứ 3 bằng cách tạo 1 tập tin `dependabot.yaml` (hoặc `.yml` đều được) và đặt trong thư mục `.github` trong repository của dự án. Nội dung file `dependabot.yaml` có cấu trúc như sau:
@@ -97,15 +102,13 @@ Sau khi được cài đặt, GitHub sẽ tự động chạy Dependabot theo l�
 
 Sau khi nhận được các pull request, bạn có thể xem các thay đổi được đề xuất và merge vào nhánh chính của dự án.
 
-## Trước khi kết thúc
-
-Chúng ta đã tìm hiểu cách cài đặt Dependabot để tự động cập nhật phiên bản mới cho các thư viện bên thứ 3 được sử dụng trong dự án. Bạn có thể tham khảo tài liệu chính thức của Dependabot tại https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/about-dependabot-version-updates.
+## Tự động merge các pull request tạo bởi Dependabot
 
 Mặc dù Dependabot có thể tự động cập nhật phiên bản của các thư viện bên thứ 3, bạn vẫn cần phải review và merge cả pull request tạo bới Dependabot một cách thủ công. Bạn có thể tiến thêm 1 bước nữa: cài đặt 1 GitHub action tự động merge các pull request này.
 
 ```bs-alert warning flex
 <i class="fas fa-triangle-exclamation fa-xl me-2"></i>
-Đoạn mã tiếp sau đây nhằm mục đích trình diễn tính năng tự động merge pull request được tạo bởi Dependabot. Trong thực tế, bạn nên cân nhắc khi cài đặt tính năng này. Merge pull mà request không qua bước test hay review có thể sẽ gây ra một số nguy cơ tiềm ẩn cho dự án.
+Đoạn mã tiếp sau đây nhằm mục đích trình diễn tính năng tự động merge pull request được tạo bởi Dependabot. Trong thực tế, bạn nên cân nhắc khi cài đặt tính năng này. Merge pull request không qua bước test hay review có thể sẽ gây ra một số nguy cơ tiềm ẩn cho dự án.
 ```
 
 Tạo 1 file `automerge.yaml` đặt trong thư mục `.github/workflows` với nội dung như sau:
@@ -171,6 +174,25 @@ jobs:
 ```
 
 Commit và push file mới lên nhánh `main`. Từ lúc này, mỗi khi Dependabot tạo pull request để cập nhật phiên bản mới cho các thư viện bên thứ 3, GitHub action sẽ tự động merge các pull request này vào nhánh `main` của dự án.
+
+## Trước khi kết thúc
+
+Chúng ta đã tìm hiểu cách cài đặt Dependabot để tự động cập nhật phiên bản mới cho các thư viện bên thứ 3 được sử dụng trong dự án. Bạn có thể tham khảo tài liệu chính thức của Dependabot tại https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/about-dependabot-version-updates.
+
+Dependabot là một công cụ miễn phí và mạnh mẽ để theo dõi và cập nhật phiên bản mới cho các thư viện bên thứ 3. Tuy nhiên, Dependabot chỉ hoạt động với các dự án host trên GitHub. Nếu dự án của bạn không host trên GitHub, bạn có thể sử dụng một số công cụ xây dựng dựa trên Dependabot như:
+
+- [dependabot-gitlab](https://gitlab.com/dependabot-gitlab/dependabot): là một ứng dụng xây dựng trên thư viện [dependabot-core](https://github.com/dependabot/dependabot-core), cung cấp tính năng tương tự như Dependabot cho các dự án host trên GitLab.
+- [dependabot-azure-devops](https://github.com/tinglesoftware/dependabot-azure-devops): là một công cụ sử dụng Dependabot để theo dõi và cập nhật thư viện bên thứ 3 cho các dự án host trên Azure DevOps.
+
+Hoặc một số giải pháp của bên thứ 3 như:
+
+- [Renovate](https://github.com/renovatebot/renovate): mã nguồn mở, hỗ trợ đa ngôn ngữ và đa nền tảng (GitHub, GitLab, Bitbucket, Azure DevOps, AWS CodeCommit, ...).
+- [FOSSA](https://fossa.com/): là một giải pháp dạng SaaS. [Gói miễn phí](https://fossa.com/pricing) hỗ trợ 5 dự án <sup>[*]</sup>.
+
+```bs-alert warning
+
+[*] Thông tin ở thời điểm bài viết được đăng tải. Bên cung cấp dịch vụ có thể thay đổi chính sách bất cứ lúc nào.
+```
 
 <hr >
 
