@@ -1,0 +1,16 @@
+title:
+    en: Run scheduled tasks on Azure
+    vi: Chạy tác vụ theo lịch trên Azure
+summary:
+    en: This post explores options that you can run scheduled tasks on Azure.
+    vi: Khám phá các lựa chọn bạn có thể chạy tác vụ theo lịch trình trên Azure.
+icon:
+img: '{"s":"entry-img-s.jpg","v":"entry-img-v.jpg","h":"entry-img-h.jpg"}'
+file:
+    en: index-en.md
+    vi: index-vi.md
+tags:
+    en: [azure, scheduled tasks]
+    vi: [azure, lịch trình]
+tc: 1693355413
+tu: 1693355413
